@@ -49,7 +49,7 @@ function Feacher() {
           </div>
         </div>
         <div
-          className="bg-auto bg-[#fbe8de] font-extrabold text-center text-3xl md:text-5xl mt-20 p-10 md:p-16 relative tracking-tight z-[1]"
+          className="bg-auto bg-[#fbe8de] font-semibold text-center text-xl mt-20 p-10 md:p-16 relative tracking-tight z-[1]"
           style={{
             backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,
           }}
@@ -61,13 +61,20 @@ function Feacher() {
               alt=""
               className="mb-7 mx-auto"
             />
-            <div>Designjoy shows that they know the art of subtlety.</div>
-            <img
+            <div>
+              The concept of finding your tribe and the concept of finding
+              like-minded people that you can kind of grow your career with is
+              something that’s extremely compelling
+            </div>
+            <div className="mt-4">
+              That’s something everybody would want to have access to
+            </div>
+            {/* <img
               src="https://assets.website-files.com/5837424ae11409586f837994/6119d7e989cff23b39d11a86_webflow.svg"
               loading="lazy"
               alt=""
               className="mt-7 mx-auto w-[110px]"
-            />
+            /> */}
           </div>
           <img
             className="absolute left-[-5%] bottom-[10%] top-auto right-auto w-[60px] md:w-fit"
