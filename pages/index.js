@@ -6,6 +6,7 @@ import Hero2 from "../components/LandingPage/Hero2";
 import Benefits from "../components/LandingPage/Benefits";
 import RecentWork from "../components/LandingPage/RecentWork";
 import ScopeOfWork from "../components/LandingPage/ScopeOfWork";
+import Memberships from "../components/LandingPage/Memberships";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
       <Benefits />
       <RecentWork />
       <ScopeOfWork />
+      <Memberships />
     </>
   );
 }

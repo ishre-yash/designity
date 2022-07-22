@@ -10,7 +10,7 @@ function Hero2() {
         }}
       >
         <div className="container relative z-[2] max-w-6xl mx-auto text-center">
-          <h2 className="max-w-xl mx-auto font-bold text-[42px] md:text-5xl mt-0 mb-2 tracking-wide leading-[60px]">
+          <h2 className="max-w-xl mx-auto font-bold text-5xl md:text-6xl mt-0 mb-2 tracking-tight">
             It&apos;s &ldquo;you&apos;ll{" "}
             <span
               className=""
@@ -27,14 +27,14 @@ function Hero2() {
             </span>{" "}
             go back&rdquo; better
           </h2>
-          <p className="mt-5 text-2xl font-normal max-w-xl mx-auto text-[#333]">
+          <p className="mt-5 text-2xl tracking-tight font-normal max-w-lg mx-auto text-[#333]">
             Designjoy replaces unreliable freelancers and expensive agencies for
             one flat monthly fee, with designs delivered so fast that it will
             blow your mind.
           </p>
         </div>
         <div className="grid mt-24 grid-row-2 md:grid-cols-2 gap-10">
-          <div className="flex flex-col py-10 md:py-16 px-10 justify-center items-start bg-white font-bold text-3xl leading-8 md:leading-10 text-center md:text-left tracking-wide">
+          <div className="flex flex-col py-10 md:py-16 px-10 justify-center items-start bg-white font-bold text-3xl tracking-tight text-center md:text-left">
             <img
               src="https://assets.website-files.com/5837424ae11409586f837994/6119d7a83723f6d0114590ab_quotation.svg"
               loading="lazy"
@@ -49,11 +49,11 @@ function Hero2() {
                   backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/6126a045ae4708114a9f6320_5fb3e6aa7b258c2dfe0928dc.jpeg')`,
                 }}
               ></div>
-              <div className="text-sm font-normal flex flex-col md:flex-col ">
+              <div className="text-sm font-normal flex flex-col md:flex-row  ">
                 Kevin O&apos;Leary,
-                <span className="font-semibold mt-2">
+                <span className="font-semibold mt-2 md:mt-0">
                   🦈 <strong>Shark Tank</strong>
-                </span>{" "}
+                </span>
               </div>
             </div>
           </div>

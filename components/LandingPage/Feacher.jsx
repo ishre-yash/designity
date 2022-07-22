@@ -13,10 +13,10 @@ function Feacher() {
         }}
       >
         <div className="container relative z-[2] max-w-6xl mx-auto text-center">
-          <h2 className="max-w-xl mx-auto font-bold text-4xl md:text-5xl mt-0 mb-2 tracking-wide leading-[60px]">
+          <h2 className="max-w-xl mx-auto font-extrabold text-4xl md:text-5xl mt-0 mb-2 tracking-tight">
             We didn&apos;t reinvent the wheel, just design
           </h2>
-          <p className="mt-5 text-xl md:text-2xl font-normal max-w-xl mx-auto text-[#333]">
+          <p className="mt-5 text-xl md:text-2xl font-normal tracking-tight max-w-xl mx-auto text-[#333]">
             Design as you know it is out the door. Design as you want it just
             arrived.
           </p>
@@ -26,7 +26,7 @@ function Feacher() {
             <div className="icon flex w-20 text-[#333] h-20 mx-auto mb-6">
               <AiOutlineMail className="w-full h-full" />
             </div>
-            <div className="max-w-xs text-[#333] text-center mx-auto">
+            <div className="max-w-xs text-[#333] text-center mx-auto tracking-tight">
               Subscribe to a plan & request as many designs as you&apos;d like.
             </div>
           </div>
@@ -34,7 +34,7 @@ function Feacher() {
             <div className="icon flex w-20 text-[#333] h-20 mx-auto mb-6">
               <DiMagento className="w-full h-full" />
             </div>
-            <div className="max-w-xs text-[#333] text-center mx-auto">
+            <div className="max-w-xs text-[#333] text-center mx-auto tracking-tight">
               Receive your design within a few business days on average, Monday
               to Friday.
             </div>
@@ -43,18 +43,18 @@ function Feacher() {
             <div className="icon flex w-20 text-[#333] h-20 mx-auto mb-6">
               <ImLoop2 className="w-full h-full" />
             </div>
-            <div className="max-w-xs text-[#333] text-center mx-auto">
+            <div className="max-w-xs text-[#333] text-center mx-auto tracking-tight">
               We&apos;ll revise the designs until you&apos;re 100% satisfied.
             </div>
           </div>
         </div>
         <div
-          className="bg-auto bg-[#fbe8de] font-black text-center text-3xl leading-10 mt-20 p-10 md:p-16 relative tracking-wide z-[1]"
+          className="bg-auto bg-[#fbe8de] font-extrabold text-center text-3xl md:text-5xl mt-20 p-10 md:p-16 relative tracking-tight z-[1]"
           style={{
             backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,
           }}
         >
-          <div className="max-w-xl mx-auto">
+          <div className="max-w-2xl mx-auto">
             <img
               src="https://assets.website-files.com/5837424ae11409586f837994/6119d7a83723f6d0114590ab_quotation.svg"
               loading="lazy"

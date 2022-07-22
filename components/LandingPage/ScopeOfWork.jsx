@@ -110,6 +110,35 @@ function ScopeOfWork() {
           </div>
         </div>
       </section>
+      <div className="flex flex-col items-center justify-center h-32 relative z-[1]">
+        <div
+          className="w-full h-[50%] bg-white"
+          style={{
+            backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,
+          }}
+        ></div>
+        <div
+          className="w-full h-[50%] bg-[#fbe8de]"
+          style={{
+            backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,
+          }}
+        ></div>
+        <img
+          className="absolute"
+          src="https://assets.website-files.com/5837424ae11409586f837994/6119d6836ada862d90f89116_Divider.svg"
+          alt=""
+        />
+        <img
+          className="max-w-none absolute right-0 w-24 md:w-36 top-[-10%] md:top-[-20%] z-[2]"
+          src="https://assets.website-files.com/5837424ae11409586f837994/6297eb2700a23638c2e486ec_19.svg"
+          alt=""
+        />
+        <img
+          className="absolute bottom-[-84%] left-0 top-auto right-auto"
+          src="https://assets.website-files.com/5837424ae11409586f837994/6297eb2738300c1fd0d4b4ff_43.svg"
+          alt=""
+        />
+      </div>
     </>
   );
 }

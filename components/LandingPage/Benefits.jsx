@@ -24,10 +24,10 @@ function Benefits() {
                 loading="lazy"
                 alt=""
               />
-              <h2 className="max-w-xl mx-auto font-bold text-4xl md:text-5xl mt-0 mb-2 tracking-wide leading-[60px]">
+              <h2 className="max-w-xl mx-auto font-bold text-4xl md:text-5xl mt-0 mb-2 tracking-tight">
                 Membership benefits
               </h2>
-              <p className="mt-5 text-xl md:text-2xl font-normal max-w-xl mx-auto text-[#333]">
+              <p className="mt-5 text-xl md:text-2xl font-normal max-w-xl mx-auto text-[#333] tracking-tight">
                 Perks so good you&apos;ll never need to go anywhere else for
                 your design. Seriously.
               </p>

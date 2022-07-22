@@ -20,10 +20,10 @@ function Hero() {
       >
         <div className="container relative z-[2] max-w-6xl mx-auto text-center">
           <div className="max-w-3xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold">
+            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight">
               A design agency with a twist
             </h1>
-            <p className="mt-5 text-xl md:text-2xl">
+            <p className="mt-5 text-xl md:text-2xl traking-tight">
               Design subscriptions to scale your business.
             </p>
             <Butten title="See plans" />
