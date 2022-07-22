@@ -1,18 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { BsFillLightningFill } from "react-icons/bs";
 import { MdOutlineDesignServices, MdOutlineAttachMoney } from "react-icons/md";
 import { BiPaint } from "react-icons/bi";
 import { CgDisplayFlex } from "react-icons/cg";
 import { FaFingerprint } from "react-icons/fa";
+import Butten from "../UiComponents/Butten";
 
 function Benefits() {
-  const [benefits, setBenefits] = useState([
-    {
-      icon: `<AiOutlineMail className="w-full h-full" />}`,
-      title: "Design board",
-      benefit: "Add as many design requests to your board as you&apos;d like.",
-    },
-  ]);
   return (
     <>
       <section
@@ -37,17 +31,7 @@ function Benefits() {
                 Perks so good you&apos;ll never need to go anywhere else for
                 your design. Seriously.
               </p>
-              <div className="butten mt-10 block text-center">
-                <a
-                  className="w-fit mx-auto px-16  bg-black rounded-lg flex items-center justify-center font-bold text-[17px] py-6 text-center text-white no-underline tracking-wide transition duration-200 hover:-translate-y-1"
-                  style={{
-                    boxShadow: `6px 6px 0 0 rgb(0 0 0 / 20%)`,
-                    transition: "0.2s",
-                  }}
-                >
-                  <div>See plans</div>
-                </a>
-              </div>
+              <Butten title="See plans" />
             </div>
           </div>
           <section>
@@ -123,6 +107,7 @@ function Benefits() {
           </section>
         </div>
       </section>
+
       <div className="flex flex-col items-center justify-center h-32 relative z-[1]">
         <div
           className="w-full h-[50%] bg-white"

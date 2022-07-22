@@ -1,4 +1,5 @@
 import React from "react";
+import Butten from "../UiComponents/Butten";
 
 function Hero() {
   return (
@@ -25,17 +26,8 @@ function Hero() {
             <p className="mt-5 text-xl md:text-2xl">
               Design subscriptions to scale your business.
             </p>
-            <div className="butten mt-10 block text-center">
-              <a
-                className="w-fit mx-auto px-16  bg-black rounded-lg flex items-center justify-center font-bold text-[17px] py-6 text-center text-white no-underline tracking-wide transition duration-200 hover:-translate-y-1"
-                style={{
-                  boxShadow: `6px 6px 0 0 rgb(0 0 0 / 20%)`,
-                  transition: "0.2s",
-                }}
-              >
-                <div>See plans</div>
-              </a>
-            </div>
+            <Butten title="See plans" />
+
             <div className="flex mt-8 text-xs justify-center items-center font-normal">
               <div>Designs you&apos;ll</div>
               <img
