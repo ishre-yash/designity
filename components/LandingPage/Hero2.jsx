@@ -34,7 +34,12 @@ function Hero2() {
           </p>
         </div>
         <div className="grid mt-24 grid-row-2 md:grid-cols-2 gap-10">
-          <div className="flex flex-col py-10 md:py-16 px-10 justify-center items-start bg-white font-bold text-3xl tracking-tight text-center md:text-left">
+          <div
+            className="flex flex-col py-10 md:py-16 px-10 justify-center items-start bg-white font-bold text-3xl tracking-tight text-center md:text-left"
+            style={{
+              backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,
+            }}
+          >
             <img
               src="https://assets.website-files.com/5837424ae11409586f837994/6119d7a83723f6d0114590ab_quotation.svg"
               loading="lazy"

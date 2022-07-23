@@ -46,7 +46,7 @@ function FooterHero() {
       <section
         className=" overflow-hidden relative pt-24 pb-28 bg-auto bg-black text-white px-6 md:px-16"
         style={{
-          backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,
+          backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/611b2d3c1a84f270060c9ec1_Texture.png')`,
         }}
       >
         <div className="container relative z-[2] max-w-6xl mx-auto text-center">

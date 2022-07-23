@@ -4,7 +4,7 @@ function Memberships() {
   return (
     <>
       <section
-        className="overflow-hidden pt-16 px-4 md:px-16 pb-10 bg-auto"
+        className="overflow-hidden pt-16 px-4 md:px-16 pb-10 bg-auto bg-[#fbe8de]"
         style={{
           backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,
         }}
@@ -23,10 +23,10 @@ function Memberships() {
               alt=""
             />
           </div>
-          <div className="mt-16 grid md:grid-cols-4 gap-1">
+          <div className="mt-16 grid md:grid-cols-4 gap-4 md:gap-1">
             <section>
               <div
-                className="relative flex flex-col min-h-[450px] justify-between pt-16 px-8 pb-8 bg-white text-black text-start gap-8"
+                className="relative flex flex-col h-fit md:min-h-[450px] justify-between pt-16 px-8 pb-8 bg-white text-black text-start md:gap-8"
                 style={{
                   backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,
                 }}
@@ -57,7 +57,7 @@ function Memberships() {
                       <div className="inline-block">Get started</div>
                     </a>
                   </div>
-                  <div className="mt-6 font-semibold text-sm w-fit mx-auto border-b-2 border-dotted border-black">
+                  <div className="mt-6 font-semibold text-sm w-fit md:mx-auto border-b-2 border-dotted border-black">
                     Book a call
                   </div>
                 </div>
@@ -93,7 +93,7 @@ function Memberships() {
             </section>
             <section>
               <div
-                className="relative flex flex-col min-h-[450px] justify-between pt-16 px-8 pb-8 bg-white text-black text-start gap-8"
+                className="relative flex flex-col h-fit md:min-h-[450px] justify-between pt-16 px-8 pb-8 bg-white text-black text-start md:gap-8"
                 style={{
                   backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,
                 }}
@@ -122,7 +122,7 @@ function Memberships() {
                       <div className="inline-block">Get started</div>
                     </a>
                   </div>
-                  <div className="mt-6 font-semibold text-sm w-fit mx-auto border-b-2 border-dotted border-black">
+                  <div className="mt-6 font-semibold text-sm w-fit md:mx-auto border-b-2 border-dotted border-black">
                     Book a call
                   </div>
                 </div>
@@ -149,7 +149,7 @@ function Memberships() {
             </section>
             <section>
               <div
-                className="relative flex flex-col min-h-[450px] justify-between pt-16 px-8 pb-8 bg-white text-black text-start gap-8"
+                className="relative flex flex-col h-fit md:min-h-[450px] justify-between pt-16 px-8 pb-8 bg-white text-black text-start md:gap-8"
                 style={{
                   backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,
                 }}
@@ -178,7 +178,7 @@ function Memberships() {
                       <div className="inline-block">Get started</div>
                     </a>
                   </div>
-                  <div className="mt-6 font-semibold text-sm w-fit mx-auto border-b-2 border-dotted border-black">
+                  <div className="mt-6 font-semibold text-sm w-fit md:mx-auto border-b-2 border-dotted border-black">
                     Book a call
                   </div>
                 </div>
@@ -203,16 +203,17 @@ function Memberships() {
                 </div>
               </div>
             </section>
+
             <section>
               <div
-                className="relative flex flex-col p-8 md:bg-white text-start gap-8 text-sm text-[#333] h-fit md:min-h-[805px]"
+                className="relative flex flex-col p-8 bg-[#fbe8de]  md:bg-white text-center justify-center gap-8 text-sm text-[#333] h-fit md:min-h-[805px]"
                 style={{
                   backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,
                 }}
               >
                 <div className="pb-8 border-b border-[#000]">
                   <img
-                    className="mb-5"
+                    className="mb-5 mx-auto"
                     src="https://assets.website-files.com/5837424ae11409586f837994/611abc6c32fdaa097c267b19_dFrame.svg"
                     alt=""
                   />
@@ -229,7 +230,7 @@ function Memberships() {
                 </div>
                 <div>
                   <img
-                    className="mb-5"
+                    className="mb-5 mx-auto"
                     src="https://assets.website-files.com/5837424ae11409586f837994/611abc6c5e7a2adf4b36ad2c_ddGroup.svg"
                     alt=""
                   />
@@ -240,7 +241,7 @@ function Memberships() {
                     Earn 5% monthly recurring commissions for each referral.
                   </div>
 
-                  <div className="mt-6 font-semibold text-sm w-fit  border-black">
+                  <div className="text-sm mt-5 font-extrabold tracking-tighter text-black">
                     Join now
                   </div>
                 </div>
