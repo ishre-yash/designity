@@ -129,12 +129,12 @@ function ScopeOfWork() {
           alt=""
         />
         <img
-          className="max-w-none absolute right-0 w-24 md:w-36 top-[-10%] md:top-[-20%] z-[2]"
+          className="right max-w-none absolute right-0 w-24 md:w-36 top-[-10%] md:top-[-20%] z-[2]"
           src="https://assets.website-files.com/5837424ae11409586f837994/6297eb2700a23638c2e486ec_19.svg"
           alt=""
         />
         <img
-          className="absolute bottom-[-84%] left-0 top-auto right-auto"
+          className="left absolute bottom-0 md:bottom-[-84%] left-0 w-[90px] md:w-[110px] top-auto right-auto"
           src="https://assets.website-files.com/5837424ae11409586f837994/6297eb2738300c1fd0d4b4ff_43.svg"
           alt=""
         />

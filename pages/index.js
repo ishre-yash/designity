@@ -7,6 +7,8 @@ import Benefits from "../components/LandingPage/Benefits";
 import RecentWork from "../components/LandingPage/RecentWork";
 import ScopeOfWork from "../components/LandingPage/ScopeOfWork";
 import Memberships from "../components/LandingPage/Memberships";
+import Faq from "../components/LandingPage/Faq";
+import Footer from "../components/LandingPage/Footer";
 
 export default function Home() {
   return (
@@ -31,6 +33,8 @@ export default function Home() {
       <RecentWork />
       <ScopeOfWork />
       <Memberships />
+      <Faq />
+      <Footer />
     </>
   );
 }
