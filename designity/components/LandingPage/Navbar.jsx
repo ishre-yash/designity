@@ -59,7 +59,7 @@ function MobileNavbar({ show, setShow }) {
       <section
         className={`${show ? "block" : "hidden"} absolute z-[100] md:hidden`}
       >
-        <div className="w-screen h-fit bg-white antialiased relative flex items-center overflow-hidden text-center mt-2 p-4 flex flex-col">
+        <div className="w-screen h-fit bg-white antialiased relative flex items-center overflow-hidden text-center p-4 flex flex-col">
           <a
             href="#latest"
             onClick={() => setShow(!show)}

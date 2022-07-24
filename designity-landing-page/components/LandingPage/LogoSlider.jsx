@@ -7,7 +7,7 @@ import "swiper/css";
 function LogoSlider() {
   return (
     <>
-      <section className="overflow-hidden mx-auto p-10 md:py-10 bg-[#000]">
+      <section className="overflow-hidden mx-auto py-10 md:py-10 bg-[#000]">
         <Swiper
           slidesPerView={6}
           spaceBetween={30}
