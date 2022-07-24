@@ -2,7 +2,6 @@ import React from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { ImLoop2 } from "react-icons/im";
 import { DiMagento } from "react-icons/di";
-import Fade from "react-reveal/Fade";
 
 function Feacher() {
   return (
@@ -15,7 +14,7 @@ function Feacher() {
       >
         <div className="container relative z-[2] max-w-6xl mx-auto text-center">
           <h2 className="max-w-xl mx-auto font-extrabold text-4xl md:text-5xl mt-0 mb-2 tracking-tight">
-          <Fade bottom>We didn&apos;t reinvent the wheel, just design</Fade>
+            We didn&apos;t reinvent the wheel, just design
           </h2>
           <p className="mt-5 text-xl md:text-2xl font-normal tracking-tight max-w-xl mx-auto text-[#333]">
             Design as you know it is out the door. Design as you want it just
@@ -62,20 +61,16 @@ function Feacher() {
               alt=""
               className="mb-7 mx-auto"
             />
-            <div>
-              The concept of finding your tribe and the concept of finding
-              like-minded people that you can kind of grow your career with is
-              something that’s extremely compelling
+            <div className="text-[33px] font-bold tracking-tighter leading-[40px] max-w-xl mx-auto">
+              Designjoy shows that they know the art of subtlety.
             </div>
-            <div className="mt-4">
-              That’s something everybody would want to have access to
-            </div>
-            {/* <img
+
+            <img
               src="https://assets.website-files.com/5837424ae11409586f837994/6119d7e989cff23b39d11a86_webflow.svg"
               loading="lazy"
               alt=""
               className="mt-7 mx-auto w-[110px]"
-            /> */}
+            />
           </div>
           <img
             className="absolute left-[-5%] bottom-[10%] top-auto right-auto w-[60px] md:w-fit"

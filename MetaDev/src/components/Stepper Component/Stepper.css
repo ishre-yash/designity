@@ -1,0 +1,89 @@
+ul {
+  text-decoration: none;
+}
+
+.navmenu {
+  font-family: "Inter";
+  position: absolute;
+  top: 2%;
+}
+
+.navmenu ul {
+  padding-left: 50px;
+  position: relative;
+}
+
+.navmenu ul::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: calc(100% - 50px);
+  left: 40px;
+  top: 0;
+  background-color: black;
+  z-index: 10;
+  margin-top: 30px;
+}
+
+.navmenu ul li {
+  padding: 15px 0;
+  padding-left: 10px;
+  width: 150px;
+}
+
+.navmenu ul li p {
+  position: relative;
+  font-size: 12px;
+}
+
+.navmenu ul li p::before {
+  content: "";
+  position: absolute;
+  overflow: none;
+  margin-left: 0px;
+  width: 18px;
+  height: 18px;
+  left: -28px;
+  top: 50%;
+  transform: translateY(-45%);
+  border-radius: 50px;
+  z-index: 30;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-image: url("../../assets/62a23245e3f2844dac0208c9_icon-faq-1.svg");
+}
+.navmenu ul li p.active::before {
+  content: "";
+  position: absolute;
+  background-color: white;
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  left: -28px;
+  top: 50%;
+  z-index: 11;
+  transform: translateY(-40%);
+  border-radius: 50px;
+}
+
+.navmenu ul li p.active {
+  color: green;
+  font-weight: 600;
+}
+.navmenu ul::after {
+  color: green;
+  font-weight: 600;
+  font-size: 12px;
+  background-color: green;
+}
+
+.navmenu ul li p.active::before {
+  /* background-color: white; */
+  background-image: url("../../assets/62a232a4fec4de120f06e796_icon-faq-2.svg");
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  text-align: center;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
