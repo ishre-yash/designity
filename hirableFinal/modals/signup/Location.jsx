@@ -77,7 +77,7 @@ const Location = ({
   return (
     <>
       <div className="flex items-center">
-        <p className="w-full leading-6">
+        <p className="leading-6 max-w-lg">
           We noticed that you&apos;re signing in from {countryName}. Do you want
           your current location to be updated as we personalize the companies
           and opportunities for you according to your location?

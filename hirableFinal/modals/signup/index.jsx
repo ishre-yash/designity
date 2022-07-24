@@ -506,7 +506,7 @@ const SignUp = () => {
             </p>
           </div>
         </div>
-        <div className="pt-3 px-4 md:px-20 md:pr-28 flex-grow overflow-y-auto">
+        <div className="pt-3 px-4 h-screen my-auto md:px-20 md:pr-28 flex-grow overflow-y-auto">
           <div className="pt-8" style={{ color: '#141820' }}>
             <div
               className={classNames(
