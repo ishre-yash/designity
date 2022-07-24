@@ -14,7 +14,7 @@ import Location from './Location';
 import zones from '../../utils/constants/zones';
 import 'react-phone-input-2/lib/style.css';
 
-const SignUp = ({ handleClose }) => {
+const SignUp = () => {
   const [passwordToggle, setPasswordToggle] = useState(false);
   const [otp, setOtp] = useState({ isEnabled: false, otpData: '' });
   const [steps, setSteps] = useState(1);
@@ -153,7 +153,9 @@ const SignUp = ({ handleClose }) => {
         verifyOtp(otpData, email)
           .then((res) => {
             handleSetErrors('otpLoad', 'OTP Validated');
-            window.location.replace(process.env.NEXT_PUBLIC_DASHBOARD_URL+`?token=${res.headers["token"]}`);
+            window.location.replace(
+              `${process.env.NEXT_PUBLIC_DASHBOARD_URL}?token=${res.headers.token}`
+            );
           })
           .catch(() => {
             handleSetErrors('otpLoad', '');
@@ -453,7 +455,7 @@ const SignUp = ({ handleClose }) => {
     }
     let timeoutId = null;
     if (username.length > 0 && checkUsername(username, true)) {
-      timeoutId = setTimeout( 
+      timeoutId = setTimeout(
         () => {
           import('../../utils/apis/auth').then(({ usernameAvailable }) => {
             usernameAvailable(username)
@@ -480,28 +482,12 @@ const SignUp = ({ handleClose }) => {
 
   return (
     <Backdrop>
-      <div
-        className="max-w-5xl h-11/12  container m-auto bg-white rounded-xl relative flex overflow-y-hidden"
-        style={{ maxHeight: '49rem' }}
-      >
-        <button
-          type="button"
-          className="absolute top-5 right-5"
-          onClick={handleClose}
-        >
-          <img
-            src="/svg/close.svg"
-            width={32}
-            height={32}
-            alt="close signup"
-            className="h-8 opacity-50"
-          />
-        </button>
+      <div className="w-full h-full bg-white relative flex overflow-y-hidden">
         <div
-          className="flex flex-col w-80.1 md:w-full justify-center rounded-l-xl !bg-bottom !bg-contain !bg-no-repeat"
+          className="flex flex-col w-[40%] justify-center rounded-l-xl !bg-bottom !bg-contain !bg-no-repeat"
           style={{
             background: '#eff2f6',
-            maxWidth: '20.938rem ',
+
             backgroundImage: 'url(/images/modal-bottom.b7365c4c.png)',
           }}
         >
@@ -520,7 +506,7 @@ const SignUp = ({ handleClose }) => {
             </p>
           </div>
         </div>
-        <div className="py-6 px-4 md:px-20 flex-grow overflow-y-auto">
+        <div className="pt-3 px-4 md:px-20 md:pr-28 flex-grow overflow-y-auto">
           <div className="pt-8" style={{ color: '#141820' }}>
             <div
               className={classNames(

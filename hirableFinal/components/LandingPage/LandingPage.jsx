@@ -96,7 +96,7 @@ const LandingPage = () => {
     <div className="bg-white">
       <div
         style={{ backgroundImage: 'url("/images/landing-page.png")' }}
-        className="border-0 bg-no-repeat bg-cover bg-100 h-[92vh] lg:h-[100vh] xl:h-[600px] sm-mid-tablet:bg-bottom"
+        className="border-0 bg-no-repeat bg-cover bg-100 h-[100vh] sm-mid-tablet:bg-bottom"
       >
         <div className="sm:grid sm:grid-cols-10 sm:gap-3 md:gap-6 mx-auto max-w-screen-xl px-6 md:px-12">
           <section className="col-span-6 lg:col-span-4 pt-[19%]">
