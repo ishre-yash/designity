@@ -13,6 +13,7 @@ function Hero() {
         />
       </div>
       <section
+        id="hero"
         className="hero overflow-hidden pt-48 pb-10 bg-auto md:h-screen 2xl:h-[600px]"
         style={{
           backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,

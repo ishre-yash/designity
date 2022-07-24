@@ -78,6 +78,7 @@ function ScopeOfWork() {
   return (
     <>
       <section
+        id="sow"
         className="benefits overflow-hidden py-16 bg-auto bg-white px-4 md:px-16"
         style={{
           backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,

@@ -4,6 +4,7 @@ function Memberships() {
   return (
     <>
       <section
+        id="pricing"
         className="overflow-hidden pt-16 px-4 md:px-16 pb-10 bg-auto bg-[#fbe8de]"
         style={{
           backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,

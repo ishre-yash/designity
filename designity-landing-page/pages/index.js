@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Navbar from "../components/LandingPage/Navbar";
 import Hero from "/components/LandingPage/Hero.jsx";
 import LogoSlider from "../components/LandingPage/LogoSlider";
 import Feacher from "../components/LandingPage/Feacher";
@@ -25,6 +26,7 @@ export default function Home() {
         />
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
+      <Navbar />
       <Hero />
       <LogoSlider />
       <Feacher />

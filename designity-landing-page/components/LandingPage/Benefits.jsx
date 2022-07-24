@@ -10,6 +10,7 @@ function Benefits() {
   return (
     <>
       <section
+        id="benefits"
         className="benefits overflow-hidden pt-24 pb-24 bg-auto bg-white px-4 md:px-16"
         style={{
           backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,

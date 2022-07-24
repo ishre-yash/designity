@@ -2,6 +2,7 @@ import React from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { ImLoop2 } from "react-icons/im";
 import { DiMagento } from "react-icons/di";
+import Fade from "react-reveal/Fade";
 
 function Feacher() {
   return (
@@ -14,7 +15,7 @@ function Feacher() {
       >
         <div className="container relative z-[2] max-w-6xl mx-auto text-center">
           <h2 className="max-w-xl mx-auto font-extrabold text-4xl md:text-5xl mt-0 mb-2 tracking-tight">
-            We didn&apos;t reinvent the wheel, just design
+          <Fade bottom>We didn&apos;t reinvent the wheel, just design</Fade>
           </h2>
           <p className="mt-5 text-xl md:text-2xl font-normal tracking-tight max-w-xl mx-auto text-[#333]">
             Design as you know it is out the door. Design as you want it just
