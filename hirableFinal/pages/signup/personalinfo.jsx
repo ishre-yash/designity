@@ -1,64 +1,180 @@
-import { useState } from 'react';
-import { useRouter } from 'next/dist/client/router';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import PhoneInput from 'react-phone-input-2';
-import { FaCheck } from 'react-icons/fa';
-// import InputMessage from '../../components/common/InputMessage';
-// import Backdrop from '../../components/common/Backdrop';
+import InputMessage from '../../components/common/InputMessage';
 import classNames from '../../utils/constants/classNames';
 import Input from '../../modals/signup/Input';
-// import InputError from '../../components/common/InputError';
-// import Interests from './Interests';
-// import Skills from './Skills';
-// import SocialMedia from './SocialMedia';
-// import Location from './Location';
-// import zones from '../../utils/constants/zones';
+import InputError from '../../components/common/InputError';
 import 'react-phone-input-2/lib/style.css';
 
-// import { useGlobalHomeContext } from '../../HomeContext';
-
 const PersonalInfo = () => {
-  //   const {
-  //     username,
-  //     setUsername,
-  //     alternateEmail,
-  //     setAlternateEmail,
-  //     mobileNo,
-  //     setMobileNo,
-  //     altMobileNo,
-  //     setAltMobileNo,
-  //     about,
-  //     setAbout,
-  //   } = useGlobalHomeContext();
-  const [username, setUsername] = useState('');
-  const [alternateEmail, setAlternateEmail] = useState('');
-  const [mobileNo, setMobileNo] = useState('');
-  const [altMobileNo, setAltMobileNo] = useState('');
-  const [about, setAbout] = useState('');
+  const [steps, setSteps] = useState(4);
+  const [data, setData] = useState({
+    username: '',
+    alternateEmail: '',
+    mobileNo: '+91 ',
+    altMobileNo: '+91 ',
+    about: '',
+  });
+  const [errors, setErrors] = useState({
+    usernameError: '',
+    emailError: '',
+    passwordError: '',
+    collegeError: '',
+    graduationYearError: '',
+    degreeError: '',
+    majorError: '',
+    validated: false,
+    otpError: '',
+    usernameAvail: false,
+    altEmailError: '',
+    rolesError: 'Please select atleast 2 roles',
+    emailLoad: '',
+    usernameLoad: '',
+  });
+  const { alternateEmail, mobileNo, altMobileNo, about, username } = data;
 
-  const router = useRouter();
-  const [validation, setValidation] = useState(true);
+  const {
+    usernameAvail,
+    altEmailError,
+    usernameError,
+    majorError,
 
-  const handleUsernameChange = (e) => {
-    setUsername(e.target.value);
-    // setTimeout(() => handleErrors(e.target.name, e.target.value), 100);
+    usernameLoad,
+  } = errors;
+
+  const handleSetErrors = (field, value) =>
+    setErrors((f) => ({ ...f, [field]: value }));
+  const setValidation = (val) => handleSetErrors('validated', val);
+
+  const resetErrors = () =>
+    setErrors((f) => ({
+      ...f,
+      fNameError: '',
+      usernameError: '',
+      emailError: '',
+      passwordError: '',
+      collegeError: '',
+      graduationYearError: '',
+      degreeError: '',
+      majorError: '',
+      otpError: '',
+    }));
+  // //////////////////ERRORS //////////////////
+  const checkUsername = (value, test) => {
+    if (value.length < 6) {
+      if (!test)
+        handleSetErrors(
+          'usernameError',
+          'Username should be minimum 6 characters'
+        );
+      return false;
+    }
+    if (!/^[a-z0-9_\.]+$/.test(value)) {
+      if (!test)
+        handleSetErrors(
+          'usernameError',
+          'Username can contain characters from a-z and 0-9 and no special characters except underscore and dot '
+        );
+      return false;
+    }
+    if (!test) resetErrors();
+    return true;
   };
-  const handleAlternateEmailChange = (e) => {
-    setAlternateEmail(e.target.value);
-    // setTimeout(() => handleErrors(e.target.name, e.target.value), 100);
+  const checkAltEmail = (value, test) => {
+    if (value.length > 0) {
+      if (
+        !/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+          value
+        )
+      ) {
+        if (!test) handleSetErrors('altEmailError', 'Enter a valid email');
+        return false;
+      }
+    } else if (!test) handleSetErrors('altEmailError', '');
+    if (!test) resetErrors();
+    return true;
   };
-  const handleMobileNoChange = (num) => {
-    setMobileNo(num);
-    // setTimeout(() => handleErrors(e.target.name, e.target.value), 100);
+
+  // /////////////////////////////////////////////
+
+  const handleErrors = (field, value) => {
+    switch (steps) {
+      case 4:
+        switch (field) {
+          case 'username':
+            checkUsername(value);
+            break;
+          case 'alternateEmail':
+            checkAltEmail(value);
+            break;
+          default:
+            break;
+        }
+        break;
+      default:
+        break;
+    }
   };
-  const handleAltMobileNoChange = (num) => {
-    setAltMobileNo(num);
-    // setTimeout(() => handleErrors(e.target.name, e.target.value), 100);
+
+  const checkErrorsExist = (exists) => {
+    switch (steps) {
+      case 4:
+        if (
+          checkUsername(username, true) &&
+          checkAltEmail(alternateEmail, true) &&
+          (exists || usernameAvail)
+        ) {
+          setValidation(true);
+        } else {
+          setValidation(false);
+        }
+        break;
+
+      default:
+        break;
+    }
   };
-  const handleAboutChange = (e) => {
-    setAbout(e.target.value);
-    // setTimeout(() => handleErrors(e.target.name, e.target.value), 100);
+
+  const handleChange = (e) => {
+    setData((f) => ({ ...f, [e.target.name]: e.target.value }));
+    setTimeout(() => handleErrors(e.target.name, e.target.value), 100);
   };
+  useEffect(() => checkErrorsExist(), [data, steps]);
+  useEffect(() => {
+    handleSetErrors('usernameAvail', false);
+    handleSetErrors('validated', false);
+    if (checkUsername(username, true)) {
+      handleSetErrors('usernameLoad', 'Checking for username');
+    } else {
+      handleSetErrors('usernameLoad', '');
+    }
+    let timeoutId = null;
+    if (username.length > 0 && checkUsername(username, true)) {
+      timeoutId = setTimeout(
+        () => {
+          import('../../utils/apis/auth').then(({ usernameAvailable }) => {
+            usernameAvailable(username)
+              .then(() => {
+                handleSetErrors('usernameLoad', 'Username available');
+                handleSetErrors('usernameError', '');
+                handleSetErrors('usernameAvail', true);
+                checkErrorsExist(true);
+              })
+              .catch(() => {
+                handleSetErrors('usernameLoad', '');
+                handleSetErrors('usernameError', 'Username is already taken');
+                handleSetErrors('validated', false);
+                handleSetErrors('usernameAvail', false);
+              });
+          });
+        },
+
+        2000
+      );
+    }
+    return () => clearTimeout(timeoutId);
+  }, [username]);
 
   return (
     <div className="flex w-screen h-screen overflow-y-hidden bg-white">
@@ -88,8 +204,10 @@ const PersonalInfo = () => {
       <div className="w-[60%] self-center px-4 py-6 overflow-y-scroll h-full md:px-20 2xl:h-[800px] 2xl:my-auto">
         {/*  */}
         <div className="">
-          <div className="w-full max-w-xl" style={{ color: '#141820' }}>
-            <div className={classNames(' flex items-center justify-between')}>
+          <div className="w-full max-w-xl pt-8" style={{ color: '#141820' }}>
+            <div
+              className={classNames('mt-10 flex items-center justify-between')}
+            >
               <button type="button" onClick={() => router.back()}>
                 <img
                   src="https://cdn.iconscout.com/icon/free/png-256/back-arrow-1767523-1502427.png"
@@ -149,40 +267,30 @@ const PersonalInfo = () => {
         {/*  */}
         <div className="w-fit my-auto">
           <div className={classNames('mt-8 w-full max-w-xl')}>
-            <div className="relative flex flex-col gap-2 ">
-              <Input
-                label="User Name"
-                name="username"
-                handleChange={handleUsernameChange}
-                value={username}
-                placeholder="Enter Username"
-                type="text"
+            <Input
+              label="User Name"
+              name="username"
+              handleChange={handleChange}
+              value={username}
+              placeholder="Enter Username"
+              type="text"
+            />
+            {usernameLoad && (
+              <InputMessage
+                message={usernameLoad}
+                loading={usernameLoad === 'Checking for username'}
               />
-
-              {true && (
-                <div className="rounded-full bg-[#DEEBFF]/70 text-green-500 p-1 absolute right-2 top-[55%] text-xs">
-                  <FaCheck />
-                </div>
-              )}
-            </div>
-
-            <div className="relative flex flex-col gap-2 ">
-              <Input
-                label="Alternate Email"
-                name="alternateEmail"
-                handleChange={handleAlternateEmailChange}
-                value={alternateEmail}
-                placeholder="Enter Alternate Email"
-                type="text"
-              />
-
-              {true && (
-                <div className="rounded-full bg-[#DEEBFF]/70 text-green-500 p-1 absolute right-2 top-[55%] text-xs">
-                  <FaCheck />
-                </div>
-              )}
-            </div>
-
+            )}
+            {usernameError && <InputError error={usernameError} />}
+            <Input
+              label="Alternate Email"
+              name="alternateEmail"
+              handleChange={handleChange}
+              value={alternateEmail}
+              placeholder="Enter Alternate Email"
+              type="text"
+            />
+            {altEmailError && <InputError error={altEmailError} />}
             <div className="flex">
               <div className="flex-1">
                 <label
@@ -196,7 +304,7 @@ const PersonalInfo = () => {
                 <PhoneInput
                   country="in"
                   value={mobileNo}
-                  onChange={(num) => handleMobileNoChange(num)}
+                  onChange={(num) => setData({ ...data, mobileNo: num })}
                   countryCodeEditable={false}
                   placeholder="99999 99999"
                   inputStyle={{ width: '100%' }}
@@ -212,25 +320,28 @@ const PersonalInfo = () => {
                 <PhoneInput
                   country="in"
                   value={altMobileNo}
-                  onChange={(num) => handleAltMobileNoChange(num)}
+                  onChange={(num) => setData({ ...data, altMobileNo: num })}
                   countryCodeEditable={false}
                   placeholder="99999 99999"
                   inputStyle={{ width: '100%' }}
                 />
               </div>
             </div>
-            <div className="flex flex-col mt-5">
-              <label className="mb-2 text-sm font-semibold" htmlFor="about">
+            <div className="mt-5 flex flex-col">
+              <label className="text-sm font-semibold mb-2" htmlFor="about">
                 About Me
               </label>
               <textarea
                 rows={10}
-                className="px-4 py-2 text-sm text-gray-600 transition duration-200 ease-out border rounded-md outline-none resize-none focus:border-blue-700"
+                className="text-sm border rounded-md outline-none py-2 px-4 text-gray-600
+                    focus:border-blue-700 transition duration-200 ease-out resize-none"
                 name="about"
                 value={about}
-                onChange={handleAboutChange}
+                onChange={handleChange}
               />
             </div>
+            {majorError && <InputError error={majorError} />}
+
             <div className="flex justify-center">
               <Link href="/signup/interests">
                 <a>

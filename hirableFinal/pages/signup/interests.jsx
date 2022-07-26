@@ -123,7 +123,7 @@ const Interests = () => {
   return (
     <div className="flex w-screen h-screen overflow-y-hidden bg-white">
       <div
-        className="w-1/3 flex flex-col justify-center !bg-bottom !bg-contain !bg-no-repeat"
+        className="w-[40%] flex flex-col justify-center !bg-bottom !bg-contain !bg-no-repeat"
         style={{
           background: '#eff2f6',
 
@@ -146,7 +146,7 @@ const Interests = () => {
         </div>
       </div>
 
-      <div className="w-2/3 self-center px-4 py-6 md:px-20">
+      <div className="w-[60%] self-center px-4 py-6 overflow-y-scroll h-full md:px-20 2xl:h-[800px] 2xl:my-auto">
         <div className="">
           <div className="w-full max-w-xl pt-8" style={{ color: '#141820' }}>
             <div
@@ -204,15 +204,6 @@ const Interests = () => {
                   )}
                 />
               </div>
-
-              <button
-                type="button"
-                className={classNames(
-                  'py-2 px-8 bg-signup-blue text-white rounded-md text-sm font-medium hidden'
-                )}
-              >
-                Register
-              </button>
             </div>
           </div>
         </div>
@@ -252,7 +243,7 @@ const Interests = () => {
                   </button>
                 ))}
               </div>
-              <div className="mt-1 h-[300px] overflow-y-scroll scrollbar-hide">
+              <div className="mt-1 h-full scrollbar-hide">
                 {dataSet.map((item) => {
                   const i = roles.findIndex((x) => x === item.name);
                   return (

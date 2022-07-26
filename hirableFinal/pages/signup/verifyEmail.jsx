@@ -45,7 +45,7 @@ const Interests = () => {
   return (
     <div className="flex w-screen h-screen overflow-y-hidden bg-white">
       <div
-        className="w-1/3 flex flex-col justify-center !bg-bottom !bg-contain !bg-no-repeat"
+        className="w-[40%] flex flex-col justify-center !bg-bottom !bg-contain !bg-no-repeat"
         style={{
           background: '#eff2f6',
 
@@ -68,13 +68,13 @@ const Interests = () => {
         </div>
       </div>
 
-      <div className="w-2/3 self-center px-4 py-6 overflow-y-auto md:px-20">
+      <div className="w-[60%] self-center px-4 py-6 overflow-y-scroll h-full md:px-20 2xl:h-[800px] 2xl:my-auto">
         <div className="">
-          <div className="w-full max-w-xl pt-8" style={{ color: '#141820' }}>
+          <div className="w-full max-w-xl pt-9" style={{ color: '#141820' }}>
             <div
-              className={classNames('mt-10 flex items-center justify-center')}
+              className={classNames('mt-12 flex items-center justify-center')}
             >
-              <div className="flex">
+              <div className="flex mx-auto">
                 <div
                   className={classNames(
                     'h-1 w-6 rounded-md mr-1.5 cursor-pointer bg-blue-500'
