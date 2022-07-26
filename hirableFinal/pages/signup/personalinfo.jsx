@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/dist/client/router';
+
 import PhoneInput from 'react-phone-input-2';
 import InputMessage from '../../components/common/InputMessage';
 import classNames from '../../utils/constants/classNames';
@@ -8,6 +10,8 @@ import InputError from '../../components/common/InputError';
 import 'react-phone-input-2/lib/style.css';
 
 const PersonalInfo = () => {
+  const router = useRouter();
+
   const [steps, setSteps] = useState(4);
   const [data, setData] = useState({
     username: '',
@@ -201,7 +205,7 @@ const PersonalInfo = () => {
           </p>
         </div>
       </div>
-      <div className="w-[60%] self-center px-4 py-6 overflow-y-scroll h-full md:px-20 2xl:h-[800px] 2xl:my-auto">
+      <div className="w-[60%] self-center px-4 py-6 overflow-y-scroll h-full md:px-20 2xl:h-[750px] 2xl:my-auto">
         {/*  */}
         <div className="">
           <div className="w-full max-w-xl pt-8" style={{ color: '#141820' }}>

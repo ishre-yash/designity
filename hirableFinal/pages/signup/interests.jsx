@@ -54,7 +54,12 @@ const Interests = () => {
   const updateItems = (itemName) => {
     const index = roles.findIndex((x) => x === itemName);
     const temp = [...roles];
-    if (index >= 0) {
+    if (index === -1) {
+      console.log(itemName);
+      console.log(itemName, index, temp);
+      temp.splice(index, 1);
+      setRoles(temp);
+    } else if (index >= 0) {
       temp.splice(index, 1);
       setRoles(temp);
       setInputValue('');
@@ -62,6 +67,7 @@ const Interests = () => {
         disabled: true,
         data: [],
       });
+
       return;
     }
     for (let i = 0; i < dataSet.length; i++) {
@@ -146,7 +152,7 @@ const Interests = () => {
         </div>
       </div>
 
-      <div className="w-[60%] self-center px-4 py-6 overflow-y-scroll h-full md:px-20 2xl:h-[800px] 2xl:my-auto">
+      <div className="w-[60%] self-center px-4 py-6 overflow-y-scroll h-full md:px-20 2xl:h-screen 2xl:my-auto">
         <div className="">
           <div className="w-full max-w-xl pt-8" style={{ color: '#141820' }}>
             <div
