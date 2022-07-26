@@ -7,16 +7,9 @@ import ReactFlagsSelect from 'react-flags-select';
 import timezones from '../../utils/constants/zones';
 import classNames from '../../utils/constants/classNames';
 
-// import { useGlobalHomeContext } from '../../HomeContext';
-
 const Location = () => {
   const [showLocationSelection, setShowLocationSelection] = useState(false);
-  //   const {
-  //     currentTimezone,
-  //     setCurrentTimezone,
-  //     countrySelected,
-  //     setCountrySelected,
-  //   } = useGlobalHomeContext();
+
   const [currentTimezone, setCurrentTimezone] = useState('');
   const [countrySelected, setCountrySelected] = useState('');
 
@@ -96,7 +89,7 @@ const Location = () => {
     <>
       <div className="flex w-screen h-screen overflow-y-hidden bg-white">
         <div
-          className="w-1/3 flex flex-col justify-center !bg-bottom !bg-contain !bg-no-repeat"
+          className="w-[40%] flex flex-col justify-center !bg-bottom !bg-contain !bg-no-repeat"
           style={{
             background: '#eff2f6',
 
@@ -118,7 +111,7 @@ const Location = () => {
             </p>
           </div>
         </div>
-        <div className="w-2/3 self-center px-4 py-6 overflow-y-auto md:px-20">
+        <div className="w-[60%] self-center px-4 py-6 overflow-y-auto md:px-20 h-screen 2xl:h-[800px] 2xl:my-auto">
           <div className="">
             <div className="w-full max-w-xl pt-8" style={{ color: '#141820' }}>
               <div
@@ -183,7 +176,7 @@ const Location = () => {
           </div>
 
           {/*  */}
-          <div className="h-fit mx-auto">
+          <div className="mx-auto">
             <div className="w-full max-w-xl pt-8" style={{ color: '#141820' }}>
               <div className="flex items-center">
                 <p className="w-full leading-6">

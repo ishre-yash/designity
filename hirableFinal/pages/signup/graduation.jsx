@@ -3,14 +3,10 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/dist/client/router';
 import { FaCheck } from 'react-icons/fa';
 
-// import ReactFlagsSelect from 'react-flags-select';
 import Link from 'next/dist/client/link';
-// import timezones from '../../utils/constants/zones';
 import classNames from '../../utils/constants/classNames';
 import Input from '../../modals/signup/Input';
 // import InputError from '../../components/common/InputError';
-
-// import { useGlobalHomeContext } from '../../HomeContext';
 
 const Graduation = () => {
   const [showLocationSelection, setShowLocationSelection] = useState(false);
@@ -68,7 +64,7 @@ const Graduation = () => {
     <>
       <div className="flex w-screen h-screen overflow-y-hidden bg-white">
         <div
-          className="w-1/3 flex flex-col justify-center !bg-bottom !bg-contain !bg-no-repeat"
+          className="w-[40%] flex flex-col justify-center !bg-bottom !bg-contain !bg-no-repeat"
           style={{
             background: '#eff2f6',
 
@@ -90,7 +86,7 @@ const Graduation = () => {
             </p>
           </div>
         </div>
-        <div className="w-2/3 self-center px-4 py-6 overflow-y-auto md:px-20">
+        <div className="w-[60%] self-center px-4 py-6 overflow-y-auto md:px-20 h-screen 2xl:h-[800px] 2xl:my-auto">
           {/*  */}
           <div className="">
             <div className="w-full max-w-xl pt-8" style={{ color: '#141820' }}>
@@ -151,15 +147,6 @@ const Graduation = () => {
                     )}
                   />
                 </div>
-
-                <button
-                  type="button"
-                  className={classNames(
-                    'py-2 px-8 bg-signup-blue text-white rounded-md text-sm font-medium hidden'
-                  )}
-                >
-                  Register
-                </button>
               </div>
             </div>
           </div>
