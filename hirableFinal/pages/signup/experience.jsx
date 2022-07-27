@@ -2,17 +2,13 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/dist/client/router';
 import Link from 'next/link';
-// import Error from '../../components/common/InputError';
 import classNames from '../../utils/constants/classNames';
 
-// import { useGlobalHomeContext } from '../../HomeContext';
-
 const Experience = () => {
-  //   const { experience, setExperience } = useGlobalHomeContext();
   const [experience, setExperience] = useState([]);
   const router = useRouter();
 
-  const dataSet = [
+  const [dataSet, setDataSet] = useState([
     { name: 'Business' },
     { name: 'Sales' },
     { name: 'Marketing' },
@@ -36,7 +32,7 @@ const Experience = () => {
     { name: 'Art' },
     { name: 'Legal' },
     { name: 'Biotech' },
-  ];
+  ]);
 
   const [totalSelectedItems, setTotalSelectedItems] = useState(0);
   const [autocomplete, setAutocomplete] = useState({
@@ -58,12 +54,23 @@ const Experience = () => {
       });
       return;
     }
+    let flag;
     for (let i = 0; i < dataSet.length; i++) {
       if (dataSet[i].name === itemName && totalSelectedItems < 7) {
         temp.push(itemName);
         setExperience(temp);
+        flag = 1;
         break;
       }
+      flag = 0;
+    }
+    if (flag === 0) {
+      temp.push(itemName);
+      setExperience(temp);
+      const newData = [...dataSet];
+      newData.push({ name: itemName });
+
+      setDataSet(newData);
     }
     setInputValue('');
     setAutocomplete({

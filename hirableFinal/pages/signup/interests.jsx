@@ -8,7 +8,7 @@ import classNames from '../../utils/constants/classNames';
 const Interests = () => {
   const [roles, setRoles] = useState([]);
   const router = useRouter();
-  const dataSet = [
+  const [dataSet, setDataSet] = useState([
     { name: 'IT System Administrator' },
     { name: 'Sales' },
     { name: 'Data Scientist' },
@@ -40,7 +40,7 @@ const Interests = () => {
     { name: 'Logistics Coordinator' },
     { name: 'Copywriting' },
     { name: 'Not Sure Yet' },
-  ];
+  ]);
 
   const [validation, setValidation] = useState(false);
 
@@ -54,12 +54,8 @@ const Interests = () => {
   const updateItems = (itemName) => {
     const index = roles.findIndex((x) => x === itemName);
     const temp = [...roles];
-    if (index === -1) {
-      console.log(itemName);
-      console.log(itemName, index, temp);
-      temp.splice(index, 1);
-      setRoles(temp);
-    } else if (index >= 0) {
+
+    if (index >= 0) {
       temp.splice(index, 1);
       setRoles(temp);
       setInputValue('');
@@ -70,13 +66,25 @@ const Interests = () => {
 
       return;
     }
+    let flag;
     for (let i = 0; i < dataSet.length; i++) {
       if (dataSet[i].name === itemName && totalSelectedItems < 7) {
         temp.push(itemName);
         setRoles(temp);
+        flag = 1;
         break;
       }
+      flag = 0;
     }
+    if (flag === 0) {
+      temp.push(itemName);
+      setRoles(temp);
+      const newData = [...dataSet];
+      newData.push({ name: itemName });
+
+      setDataSet(newData);
+    }
+    // console.log(roles);
     setInputValue('');
     setAutocomplete({
       disabled: true,
@@ -250,12 +258,12 @@ const Interests = () => {
                 ))}
               </div>
               <div className="mt-1 h-full scrollbar-hide">
-                {dataSet.map((item) => {
+                {dataSet.map((item, index) => {
                   const i = roles.findIndex((x) => x === item.name);
                   return (
                     <button
                       type="button"
-                      key={item.name}
+                      key={index}
                       className="inline-block px-4 py-3 mb-3 mr-2 text-sm text-gray-500 border border-gray-300 rounded-full cursor-pointer select-none"
                       style={{
                         background: i >= 0 ? '#61a0ff' : '',

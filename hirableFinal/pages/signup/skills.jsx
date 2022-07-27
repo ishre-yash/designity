@@ -3,13 +3,11 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/dist/client/router';
 import classNames from '../../utils/constants/classNames';
 
-// import { useGlobalHomeContext } from '../../HomeContext';
-
 const Skills = () => {
   const [skills, setSkills] = useState([]);
   const router = useRouter();
 
-  const dataSet = [
+  const [dataSet, setDataSet] = useState([
     { name: 'Angular js', selected: false },
     { name: 'Apache spark', selected: false },
     { name: 'C', selected: false },
@@ -23,7 +21,7 @@ const Skills = () => {
     { name: 'Github', selected: false },
     { name: 'SQL', selected: false },
     { name: 'MongoDB', selected: false },
-  ];
+  ]);
 
   const [totalSelectedItems, setTotalSelectedItems] = useState(0);
   const [autocomplete, setAutocomplete] = useState({
@@ -45,12 +43,23 @@ const Skills = () => {
       });
       return;
     }
+    let flag;
     for (let i = 0; i < dataSet.length; i++) {
       if (dataSet[i].name === itemName && totalSelectedItems < 7) {
         temp.push(itemName);
         setSkills(temp);
+        flag = 1;
         break;
       }
+      flag = 0;
+    }
+    if (flag === 0) {
+      temp.push(itemName);
+      setSkills(temp);
+      const newData = [...dataSet];
+      newData.push({ name: itemName });
+
+      setDataSet(newData);
     }
     setInputValue('');
     setAutocomplete({
