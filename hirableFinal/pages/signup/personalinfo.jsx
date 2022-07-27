@@ -205,7 +205,7 @@ const PersonalInfo = () => {
           </p>
         </div>
       </div>
-      <div className="w-[60%] self-center px-4 py-6 overflow-y-scroll h-full md:px-20 2xl:h-[750px] 2xl:my-auto">
+      <div className="w-[60%] self-center overflow-y-scroll px-4 py-5 h-full md:px-20 2xl:h-[780px] 2xl:my-auto scrollbar-hide">
         {/*  */}
         <div className="">
           <div className="w-full max-w-xl pt-8" style={{ color: '#141820' }}>

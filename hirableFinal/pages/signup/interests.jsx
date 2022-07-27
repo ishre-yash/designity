@@ -160,7 +160,7 @@ const Interests = () => {
         </div>
       </div>
 
-      <div className="w-[60%] self-center px-4 py-6 overflow-y-scroll h-full md:px-20 2xl:h-screen 2xl:my-auto">
+      <div className="w-[60%] self-center px-4 py-6 overflow-y-scroll h-full md:px-20 2xl:h-screen 2xl:my-20">
         <div className="">
           <div className="w-full max-w-xl pt-8" style={{ color: '#141820' }}>
             <div
