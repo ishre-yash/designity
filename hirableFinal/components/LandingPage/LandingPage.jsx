@@ -131,7 +131,7 @@ const LandingPage = () => {
                   className="flex flex-wrap flex-grow-0 flex-shrink mb-12 text-center m-5 max-w-company-images max-h-company-images min-h-company-images min-w-company-images justify-center mid-lg:mx-auto"
                 >
                   <Image
-                    className={loop === index ? 'animation-fade' : null}
+                    className={loop === index ? 'animation-fade-in' : null}
                     src={img}
                     alt="Company"
                   />
