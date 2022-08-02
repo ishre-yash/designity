@@ -11,59 +11,63 @@ import 'aos/dist/aos.css';
 // const td = require('../../public/svg/td.svg');
 // const rbc = require('../../public/svg/rbc.svg');
 
-const babylon = require('../../public/svg/babylon.svg');
-const bank = require('../../public/svg/bank.svg');
-const bykea = require('../../public/svg/bykea.svg');
-const cabify = require('../../public/svg/cabify.svg');
-const coupang = require('../../public/svg/coupang.svg');
-const deliveryHero = require('../../public/svg/delivery-hero.svg');
-const gogoro = require('../../public/svg/gogoro.svg');
-const ifood = require('../../public/svg/ifood.svg');
-const jumia = require('../../public/svg/jumia.svg');
-const klarna = require('../../public/svg/klarna.svg');
-const lalamove = require('../../public/svg/lalamove.svg');
-const netflix = require('../../public/svg/netflix.svg');
-const paytm = require('../../public/svg/paytm.svg');
-const rappi = require('../../public/svg/rappi.svg');
-const shopback = require('../../public/svg/shopback.svg');
-const shopee = require('../../public/svg/shopee.svg');
-const spotify = require('../../public/svg/spotify.svg');
-const swvl = require('../../public/svg/swvl.svg');
+const amazone = require('../../public/logos/amazon.svg');
+const apple = require('../../public/logos/apple.svg');
+const careem = require('../../public/logos/careem.svg');
+const deliveroo = require('../../public/logos/deliveroo.svg');
+const discord = require('../../public/logos/discord.svg');
+const goole = require('../../public/logos/goole.svg');
+const grab = require('../../public/logos/grab.svg');
+const jumia = require('../../public/logos/jumia.svg');
+const klarna = require('../../public/logos/klarna.svg');
+const lalamove = require('../../public/logos/lalamove.svg');
+const meta = require('../../public/logos/meta.svg');
+const microsoft = require('../../public/logos/microsoft.svg');
+const noon = require('../../public/logos/noon.svg');
+const nubank = require('../../public/logos/nubank.svg');
+const rappi = require('../../public/logos/rappi.svg');
+const shopee = require('../../public/logos/shopee.svg');
+const spotify = require('../../public/logos/spotify.svg');
+const talabat = require('../../public/logos/talabat.svg');
+const tesla = require('../../public/logos/tesla.svg');
+const tiktok = require('../../public/logos/tiktok.svg');
 
 const LandingPage = () => {
   // const bankImages = [bankofamerica, wellsfargo, captialone, citi, rbc, td];
   const [allCompanies, setAllCompanies] = useState([
-    babylon,
-    bank,
-    bykea,
-    cabify,
-    coupang,
-    deliveryHero,
-    gogoro,
-    ifood,
+    amazone,
+    apple,
+    careem,
+    deliveroo,
+    discord,
+    goole,
+    grab,
     jumia,
     klarna,
     lalamove,
-    netflix,
-    paytm,
+    meta,
+    microsoft,
+    noon,
+    nubank,
     rappi,
-    shopback,
     shopee,
     spotify,
-    swvl,
+    talabat,
+    tesla,
+    tiktok,
   ]);
 
   const [CompanyImages, setCompanyImages] = useState([
-    babylon,
-    bank,
-    bykea,
-    cabify,
-    coupang,
-    deliveryHero,
-    gogoro,
-    ifood,
+    amazone,
+    apple,
+    careem,
+    deliveroo,
+    discord,
+    goole,
+    grab,
     jumia,
     klarna,
+    lalamove,
   ]);
 
   useEffect(() => {
