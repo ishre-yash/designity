@@ -20,11 +20,7 @@ export default function Home() {
           content="The #1 unlimited product design subscription service for agencies, startups, and entrepreneurs."
           property="description"
         ></meta>
-        <link
-          rel="icon"
-          href="https://assets.website-files.com/5837424ae11409586f837994/5e2fb217d4837e75854462c9_Small.png"
-        />
-        {/* <link rel="icon" href="/favicon.ico" /> */}
+        <link rel="icon" href="/logos/favicon.png" />
       </Head>
       <Navbar />
       <Hero />

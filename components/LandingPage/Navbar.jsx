@@ -9,7 +9,7 @@ function Navbar() {
             href="#hero"
             className="relative block px-8 py-6 text-left mx-auto bg-transparent bg-[#2c2c2c] hover:bg-[#424242] text-sm font-bold rounded-full transition-all duration-200 ease-in-out bg-center bg-no-repeat bg-auto"
             style={{
-              backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/624322b0c806026f5689d841_Group%2012569.svg')`,
+              backgroundImage: `url('/img/heroIcon.svg')`,
             }}
           ></a>
           <a
@@ -59,7 +59,7 @@ function MobileNavbar({ show, setShow }) {
       <section
         className={`${show ? "block" : "hidden"} absolute z-[100] md:hidden`}
       >
-        <div className="w-screen h-fit bg-white antialiased relative flex items-center overflow-hidden text-center p-4 flex flex-col">
+        <div className="w-screen h-fit bg-white antialiased relative flex items-center overflow-hidden text-center p-4 flex-col">
           <a
             href="#latest"
             onClick={() => setShow(!show)}

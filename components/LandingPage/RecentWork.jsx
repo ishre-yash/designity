@@ -8,7 +8,7 @@ function RecentWork() {
         id="latest"
         className="hero2 overflow-hidden pt-24 pb-24 bg-auto bg-[#e1eaf4] px-6 md:px-16"
         style={{
-          backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,
+          backgroundImage: `url('/backgrounds/noise.png')`,
         }}
       >
         <div className="container relative z-[2] max-w-6xl mx-auto text-center">
@@ -73,13 +73,13 @@ function RecentWork() {
         <div
           className="w-full h-[50%] bg-[#e1eaf4]"
           style={{
-            backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,
+            backgroundImage: `url('/backgrounds/noise.png')`,
           }}
         ></div>
         <div
           className="w-full h-[50%] bg-white"
           style={{
-            backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,
+            backgroundImage: `url('/backgrounds/noise.png')`,
           }}
         ></div>
         <img
@@ -91,14 +91,14 @@ function RecentWork() {
       <section
         className="benefits overflow-hidden py-16 bg-auto bg-white px-4 md:px-16"
         style={{
-          backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,
+          backgroundImage: `url('/backgrounds/noise.png')`,
         }}
       >
         <div className="container relative z-[2] max-w-6xl mx-auto text-center">
           <div
             className="bg-auto bg-[#fbe8de] font-black text-center text-3xl leading-10 p-10 md:p-16 relative tracking-wide z-[1]"
             style={{
-              backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,
+              backgroundImage: `url('/backgrounds/noise.png')`,
             }}
           >
             <div className="max-w-lg">

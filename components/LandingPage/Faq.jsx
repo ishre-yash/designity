@@ -45,7 +45,7 @@ function Faq() {
         id="faq"
         className="overflow-hidden pt-16 px-4 md:px-16 pb-10 bg-auto bg-white"
         style={{
-          backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,
+          backgroundImage: `url('/backgrounds/noise.png')`,
         }}
       >
         <div className="container relative z-[2] max-w-6xl mx-auto text-center">

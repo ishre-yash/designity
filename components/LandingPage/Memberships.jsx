@@ -7,7 +7,7 @@ function Memberships() {
         id="pricing"
         className="overflow-hidden pt-16 px-4 md:px-16 pb-10 bg-auto bg-[#fbe8de]"
         style={{
-          backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,
+          backgroundImage: `url('/backgrounds/noise.png')`,
         }}
       >
         <div className="container relative z-[2] max-w-6xl mx-auto text-center">
@@ -29,7 +29,7 @@ function Memberships() {
               <div
                 className="relative flex flex-col h-fit md:min-h-[450px] justify-between pt-16 px-8 pb-8 bg-white text-black text-start md:gap-8"
                 style={{
-                  backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,
+                  backgroundImage: `url('/backgrounds/noise.png')`,
                 }}
               >
                 <div>
@@ -74,7 +74,7 @@ function Memberships() {
               <div
                 className="h-fit md:min-h-[350px] mt-1 p-7 flex flex-col justify-between bg-white text-left"
                 style={{
-                  backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,
+                  backgroundImage: `url('/backgrounds/noise.png')`,
                 }}
               >
                 <div className="text-sm ">
@@ -96,7 +96,7 @@ function Memberships() {
               <div
                 className="relative flex flex-col h-fit md:min-h-[450px] justify-between pt-16 px-8 pb-8 bg-white text-black text-start md:gap-8"
                 style={{
-                  backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,
+                  backgroundImage: `url('/backgrounds/noise.png')`,
                 }}
               >
                 <div>
@@ -131,7 +131,7 @@ function Memberships() {
               <div
                 className="f-fit md:min-h-[350px] mt-1 p-7 flex flex-col justify-between bg-white text-left"
                 style={{
-                  backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,
+                  backgroundImage: `url('/backgrounds/noise.png')`,
                 }}
               >
                 <div className="text-sm ">
@@ -152,7 +152,7 @@ function Memberships() {
               <div
                 className="relative flex flex-col h-fit md:min-h-[450px] justify-between pt-16 px-8 pb-8 bg-white text-black text-start md:gap-8"
                 style={{
-                  backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,
+                  backgroundImage: `url('/backgrounds/noise.png')`,
                 }}
               >
                 <div>
@@ -187,7 +187,7 @@ function Memberships() {
               <div
                 className="h-fit md:min-h-[350px] mt-1 p-7 flex flex-col justify-between bg-white text-left"
                 style={{
-                  backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,
+                  backgroundImage: `url('/backgrounds/noise.png')`,
                 }}
               >
                 <div className="text-sm ">
@@ -209,7 +209,7 @@ function Memberships() {
               <div
                 className="relative flex flex-col p-8 bg-[#fbe8de]  md:bg-white text-center justify-center gap-8 text-sm text-[#333] h-fit md:min-h-[805px]"
                 style={{
-                  backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,
+                  backgroundImage: `url('/backgrounds/noise.png')`,
                 }}
               >
                 <div className="pb-8 border-b border-[#000]">
@@ -275,13 +275,13 @@ function Memberships() {
         <div
           className="w-full h-[50%] bg-[#fbe8de]"
           style={{
-            backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,
+            backgroundImage: `url('/backgrounds/noise.png')`,
           }}
         ></div>
         <div
           className="w-full h-[50%] bg-white"
           style={{
-            backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,
+            backgroundImage: `url('/backgrounds/noise.png')`,
           }}
         ></div>
         <img

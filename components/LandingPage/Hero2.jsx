@@ -6,7 +6,7 @@ function Hero2() {
       <section
         className="hero2 overflow-hidden pt-24 pb-24 bg-auto bg-[#e1eaf4] px-6 md:px-16"
         style={{
-          backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,
+          backgroundImage: `url('/backgrounds/noise.png')`,
         }}
       >
         <div className="container relative z-[2] max-w-6xl mx-auto text-center">
@@ -37,7 +37,7 @@ function Hero2() {
           <div
             className="flex flex-col py-10 md:py-16 px-10 justify-center items-start bg-white font-bold text-3xl tracking-tight text-center md:text-left"
             style={{
-              backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,
+              backgroundImage: `url('/backgrounds/noise.png')`,
             }}
           >
             <img
@@ -93,13 +93,13 @@ function Hero2() {
         <div
           className="w-full h-[50%] bg-[#e1eaf4]"
           style={{
-            backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,
+            backgroundImage: `url('/backgrounds/noise.png')`,
           }}
         ></div>
         <div
           className="w-full h-[50%] bg-white"
           style={{
-            backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,
+            backgroundImage: `url('/backgrounds/noise.png')`,
           }}
         ></div>
         <img

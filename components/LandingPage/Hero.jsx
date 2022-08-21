@@ -9,12 +9,12 @@ function Hero() {
       <div
         className="LOGO top-0 right-0 left-0 bottom-auto flex pt-8 items-center justify-between md:justify-center px-4 bg-[#f7e5db] relative z-50"
         style={{
-          backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,
+          backgroundImage: `url('/backgrounds/noise.png')`,
         }}
       >
         <img
           className="w-32 max-w-full block"
-          src="https://assets.website-files.com/5837424ae11409586f837994/614a5001679615173f8c6620_Group%202262.svg"
+          src="/logos/name.svg"
           alt=""
           loading="lazy"
         />
@@ -38,7 +38,7 @@ function Hero() {
         id="hero"
         className="hero overflow-hidden pt-44 pb-10 bg-auto md:h-screen 2xl:h-[600px]"
         style={{
-          backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,
+          backgroundImage: `url('/backgrounds/noise.png')`,
         }}
       >
         <div className="container relative z-[2] max-w-6xl mx-auto text-center">
@@ -53,24 +53,38 @@ function Hero() {
 
             <div className="flex mt-8 text-xs justify-center items-center font-normal">
               <div>Designs you&apos;ll</div>
-              <img
-                src="https://assets.website-files.com/5837424ae11409586f837994/61195da63e9b07d94bbaa046_heart.svg"
-                loading="lazy"
-                alt=""
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="16"
                 className="mx-1"
-              />
+                viewBox="0 0 18 16"
+                fill="none"
+              >
+                <path
+                  d="M16.9454 2.96437C16.6035 2.29836 16.11 1.72186 15.5048 1.28118C14.8995 0.840507 14.1993 0.54794 13.4605 0.426992C12.7216 0.306043 11.9647 0.360085 11.2505 0.584774C10.5364 0.809463 9.88486 1.19854 9.34836 1.72073L8.72727 2.28873L8.12581 1.74109C7.59056 1.20878 6.93598 0.81191 6.21649 0.583464C5.497 0.355018 4.73338 0.301597 3.98909 0.42764C3.24911 0.543013 2.54734 0.833292 1.94209 1.27436C1.33683 1.71543 0.84556 2.29456 0.509086 2.96364C0.0593222 3.84503 -0.0978456 4.84683 0.060396 5.82361C0.218637 6.80039 0.684053 7.70133 1.38909 8.39564L8.20581 15.4182C8.27359 15.4879 8.35466 15.5433 8.44423 15.5812C8.53379 15.619 8.63004 15.6385 8.72727 15.6385C8.8245 15.6385 8.92074 15.619 9.01031 15.5812C9.09988 15.5433 9.18095 15.4879 9.24872 15.4182L16.056 8.40873C16.7639 7.71375 17.2318 6.81118 17.3918 5.83212C17.5517 4.85306 17.3954 3.84851 16.9454 2.96437Z"
+                  fill="#EE8DB9"
+                />
+
+                <defs>
+                  <clipPath id="clip0">
+                    <rect width="17.4545" height="16" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+
               <div>, guaranteed</div>
             </div>
           </div>
         </div>
         <img
           className="absolute hidden md:block right-0 bottom-0 top-[13%] w-[16vw] max-w-[250px]"
-          src="https://assets.website-files.com/5837424ae11409586f837994/61195ed506c73c67adaf0a3d_Group%2044.svg"
+          src="/img/heroLeft.svg"
           alt=""
         />
         <img
           className="absolute left-[-5%] md:left-0 top-[5%] md:top-[15%] right-auto bottom-auto max-w-[20vw] md:w-[16vw] md:max-w-[250px]"
-          src="https://assets.website-files.com/5837424ae11409586f837994/61195ef16ada8678daf3f267_Group%2045.svg"
+          src="/img/heroRight.svg"
           alt=""
         />
       </section>

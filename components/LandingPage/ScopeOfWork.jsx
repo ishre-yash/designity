@@ -81,7 +81,7 @@ function ScopeOfWork() {
         id="sow"
         className="benefits overflow-hidden py-16 bg-auto bg-white px-4 md:px-16"
         style={{
-          backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,
+          backgroundImage: `url('/backgrounds/noise.png')`,
         }}
       >
         <div className="container relative z-[2] max-w-6xl mx-auto text-center">
@@ -115,13 +115,13 @@ function ScopeOfWork() {
         <div
           className="w-full h-[50%] bg-white"
           style={{
-            backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,
+            backgroundImage: `url('/backgrounds/noise.png')`,
           }}
         ></div>
         <div
           className="w-full h-[50%] bg-[#fbe8de]"
           style={{
-            backgroundImage: `url('https://assets.website-files.com/5837424ae11409586f837994/61195e21f792d7065d2f56ad_noise.png')`,
+            backgroundImage: `url('/backgrounds/noise.png')`,
           }}
         ></div>
         <img
